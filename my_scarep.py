@@ -25,8 +25,8 @@ def extract(page):
     art = soup.find_all('article',class_="Box-row")
     for tag in art:
         name_project.append(tag.find_all('h1',class_="h3 lh-condensed")[0].text.strip("\n").strip().split("/"))
-        star.append(tag.find_all('a',class_="Link--muted d-inline-block mr-3")[0].text.strip("\n").strip())
-    # the name of class of tag "a" sometimes changes, previously name was "muted-link d-inline-block mr-3", i hope 
+       # star.append(tag.find_all('a',class_="")[0].text.strip("\n").strip())
+    # the name of class of tag "a" sometimes changes, previously name was "muted-link d-inline-block mr-3"
     all_data = []
     for i in range(len(name_project)):
         all_data.append(name_project[i][0].strip())
